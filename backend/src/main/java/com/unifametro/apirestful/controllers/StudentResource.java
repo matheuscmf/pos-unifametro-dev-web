@@ -37,6 +37,7 @@ public class StudentResource {
 		return ResponseEntity.ok().body(list);
 	}
 	
+	@Operation(summary = "Busca alunos por ID", method = "GET")
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<StudentDTO> findById(@PathVariable Long id){
 		
