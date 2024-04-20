@@ -23,7 +23,7 @@ import io.swagger.v3.oas.annotations.Operation;
 
 @RestController
 @RequestMapping(value = "/students")
-public class StudentResource {
+public class StudentController {
 	
 	@Autowired
 	private StudentService service;
@@ -46,6 +46,7 @@ public class StudentResource {
 		return ResponseEntity.ok().body(dto);
 	}
 	
+	@Operation(summary = "Cadastra novos alunos", method = "POST")
 	@PostMapping
 	public ResponseEntity<StudentDTO> insert(@RequestBody StudentDTO dto){
 		
