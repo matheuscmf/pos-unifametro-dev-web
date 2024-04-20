@@ -57,6 +57,7 @@ public class StudentController {
 		return ResponseEntity.created(uri).body(dto);
 	}
 	
+	@Operation(summary = "Atualiza aluno existente", method = "PUT")
 	@PutMapping(value = "/{id}")
 	public ResponseEntity<StudentDTO> update(@PathVariable Long id, @RequestBody StudentDTO dto){
 		
